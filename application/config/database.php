@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '172.16.16.223',
-	'username' => 'irelint',
-	'password' => 'irelint',
-	'database' => 'ci_test',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'admin',
+	'database' => 'ci_study',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

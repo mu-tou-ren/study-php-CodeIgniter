@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-    <link rel="stylesheet" href="../../static/css/style.css">
-    <link rel="stylesheet" href="./release/wangEditor.css">
-    <script src="release/wangEditor.js"></script>
+    <link rel="stylesheet" href="/ci-demo/static/css/style.css">
+    <link rel="stylesheet" href="/ci-demo/static/js/release/wangEditor.css">
+    <script src="/ci-demo/static/js/release/wangEditor.js"></script>
 </head>
 <body>
     <header>
@@ -41,6 +41,7 @@
     <script type="text/javascript">
         var E = window.wangEditor;
         var editor = new E('#editor');
+        editor.customConfig.uploadImgServer = '/ci-demo/index.php/oss'; // 上传图片到服务器
         editor.create();
     </script>
 </body>

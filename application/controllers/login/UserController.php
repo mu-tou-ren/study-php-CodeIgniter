@@ -8,7 +8,7 @@
 class UserController extends CI_Controller
 {
 
-    public function login($username, $password)
+    public function login2($username, $password)
     {
         echo $username;
         echo $password;

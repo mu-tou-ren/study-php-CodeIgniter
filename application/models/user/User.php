@@ -9,25 +9,29 @@
 class User extends CI_Model
 {
 
-    private $id;
-    private $username;
-    private $password;
-    private $update_time;
-    private $create_time;
+    public $id;
+    public $username;
+    public $pass_word;
+    public $update_time;
+    public $create_time;
 
-    public function __construct($username, $password)
+    public function find_user($username, $password)
     {
-        parent:: __construct();
-        $this -> username = $username;
-        $this -> password = $password;
+        $this -> load ->model('user/User');
+        $this -> load ->model('common/AjaxResponse', 'AjaxResponse');
+        $this -> load -> database();
+        $query = $this -> db -> query('SELECT * FROM user WHERE username=\''. $username . '\' AND pass_word=\'' . $password . '\'');
+        $user = $query -> row(0, 'User');
+        if(isset($user))
+        {
+            $this -> load -> library('session');
+            $this -> session -> set_userdata('user', serialize($user));
+            return $this -> AjaxResponse -> success();
+        }
+        else
+        {
+            return $this -> AjaxResponse -> fail('用户名或密码错误');
+        }
     }
 
-    public function insert_user()
-    {
-        $this->username    = $_POST['username']; // please read the below note
-        $this->password  = $_POST['password'];
-        $this->create_time = time();
-
-        $this->db->insert('entries', $this);
-    }
 }

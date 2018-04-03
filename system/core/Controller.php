@@ -76,8 +76,10 @@ class CI_Controller {
 		}
 
 		$this->load =& load_class('Loader', 'core');
-		$this->load->initialize();
-		log_message('info', 'Controller Class Initialized');
+        $this->load->library('session');//开启session
+        $this->load->initialize();
+        $this->check_login();//调用判断登录的方法
+        log_message('info', 'Controller Class Initialized');
 	}
 
 	// --------------------------------------------------------------------
@@ -93,4 +95,23 @@ class CI_Controller {
 		return self::$instance;
 	}
 
+    public $need_login = true;//添加登录状态属性
+
+    public $userdata ;
+    private function check_login()
+    {//判断登录的方法
+        if ($this->need_login) {
+            $session_data = $this->session->userdata('user');
+            if (!$session_data) {
+                $url = "/ci-demo/index.php/";
+                echo "<script language='javascript' type='text/javascript'>";
+                echo "window.location.href='$url'";
+                echo "</script>";
+                exit;
+            }else{
+                $this -> load -> model('user/User');
+                $this -> userdata = unserialize($session_data);
+            }
+        }
+    }
 }

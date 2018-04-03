@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="/ci-demo/static/css/style.css">
+    <script src="/ci-demo/static/js/common/jquery-1.11.3.min.js"></script>
+    <script src="/ci-demo/static/js/article.js"></script>
 </head>
 <body>
     <header>
         <div class="user-name">
-            <span>admin</span>
+            <span><?php echo $username;?></span>
             <a href="" class="exit">退出</a>
         </div>
     </header>
@@ -34,7 +36,7 @@
                     <td>作者</td>
                     <td>
                         <button class="font-btn del-btn">删除</button>
-                        <button class="font-btn">添加</button>
+                        <button class="font-btn" id="add_article_but">添加</button>
                     </td>
                 </tr>
             </tbody>
