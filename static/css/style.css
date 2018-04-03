@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;}
+body{
+    background-image: url("../images/login_bg.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+}
+.text-center{
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin:0;
+    padding:20px 0;
+    box-sizing: border-box;
+}
+.main_content{
+    background-color: rgba(0,0,0,0.4);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    float: none;
+    border-radius: 8px;
+    padding:0px 50px 30px 50px;
+    width: 400px;
+    box-sizing: border-box;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-group input{
+    height: 40px;
+    border:1px solid mediumpurple;
+    border-radius: 6px;
+    padding-left: 10px;
+    width:100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #ffffff;
+}
+.login_btn{
+    background-color: mediumpurple;
+    height: 40px;
+    width:100%;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    border:none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-top:20px;
+    cursor: pointer;
+}
+/*头部*/
+header{
+    height: 60px;
+    background-color: rgba(0,0,0,.3);
+    padding:0 30px;
+    line-height: 60px;
+}
+.user-name{
+    font-size: 18px;
+    color: #ffffff;
+    float: right;
+}
+.exit{
+    margin-left: 20px;
+    color: #ffffff;
+}
+nav{
+    width:14%;
+    background-color: rgba(0,0,0,.3);
+    margin-top: 10px;
+    height: 600px;
+    float: left;
+}
+nav ul li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    list-style:none;
+}
+nav ul li a{
+    color: #ffffff;
+    font-size: 16px;
+    list-style:none;
+    text-decoration: none;
+}
+.main-content{
+    margin-left:16%;
+    width:82%;
+    background-color: #ffffff;
+    height: 600px;
+    margin-top: 10px;
+    padding:30px;
+    box-sizing: border-box;
+}
+#editor{
+    margin-bottom: 20px;
+}
+.article-box .login_btn{
+    width:10%;
+}
+table{
+    border: 1px solid mediumpurple;
+    width:100%;
+    border-collapse: collapse;
+}
+table thead{
+    background-color: mediumpurple;
+    opacity: .4;
+}
+table thead tr{
+    height: 40px;
+    font-size: 16px;
+}
+table tbody tr td{
+    text-align: center;
+    padding: 10px;
+}
+.font-btn{
+    background-color: transparent;
+    border:none;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #1e88e5;
+}
+.del-btn{
+    color: #ff0000;
+}
