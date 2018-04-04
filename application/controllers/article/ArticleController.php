@@ -35,6 +35,12 @@ class ArticleController extends CI_Controller
         echo json_encode($this -> article -> articleSave($this -> disposeParam()));
     }
 
+    public function deleteArticle($id){
+        $this -> load ->model('article/Article', 'article');
+        echo json_encode($this -> article -> articleDelete($id));
+
+    }
+
     public function articleUpdate(){
         $this -> load ->model('article/Article', 'article');
         echo json_encode($this -> article -> articleUpdate($this -> disposeParam()));

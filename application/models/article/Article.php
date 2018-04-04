@@ -25,14 +25,20 @@ class Article extends CI_Model
 
     public function articleSave($article){
         $this -> load -> database();
-        $query = $this -> db -> insert('article', $article);
-        return $query;
+        $bool = $this -> db -> insert('article', $article);
+        return $bool;
     }
 
     public function articleUpdate($article){
         $this -> load -> database();
-        $query = $this -> db -> update('article', $article, array('id' => $article -> id));
-        return $query;
+        $bool = $this -> db -> update('article', $article, array('id' => $article -> id));
+        return $bool;
+    }
+
+    public function articleDelete($id){
+        $this -> load -> database();
+        $bool = $this -> db -> delete('article',array('id'=>$id));
+        return $bool;
     }
 
     public function findArticles(){

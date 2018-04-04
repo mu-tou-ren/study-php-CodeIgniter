@@ -38,7 +38,7 @@
                     <td><?php echo $article['content']?></td>
                     <td><?php echo $article['author']?></td>
                     <td>
-                        <button class="font-btn del-btn">删除</button>
+                        <button class="font-btn del-btn delete_article_but" data-id="<?php echo $article['id']?>">删除</button>
                         <button class="font-btn update_article_but" data-id="<?php echo $article['id']?>">修改</button>
                     </td>
                 </tr>
