@@ -12,7 +12,7 @@
     <header>
         <div class="user-name">
             <span><?php echo $userdata ->username;?></span>
-            <a href="" class="exit">退出</a>
+            <a href="" class="exit" id="logOut_btu">退出</a>
         </div>
     </header>
     <nav>

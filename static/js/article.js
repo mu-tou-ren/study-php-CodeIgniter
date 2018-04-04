@@ -60,4 +60,18 @@ $(function () {
             }
         });
     })
+
+    $('#logOut_btu').click(function(){
+        $.ajax({
+            type: "post",
+            url: "/ci-demo/index.php/LoginController/logOut",
+            cache: false,
+            dataType: "json",
+            success: function (data) {
+                if(data.success){
+                    window.location.href = '/ci-demo/index.php/';
+                }
+            }
+        });
+    })
 })
